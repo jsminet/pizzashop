@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_easybi_domain_PizzaOrder" items="${pizzaorders}" z="JsStZ63SoEkUX9CIelA9Jqd86rQ=">
+        <table:table data="${pizzaorders}" id="l_org_easybi_domain_PizzaOrder" path="/pizzaorders" z="s6d4Dj9YZjM3iQzymEw6osNOD1U=">
+            <table:column id="c_org_easybi_domain_PizzaOrder_name" property="name" z="FOPHilTOc+/BZvuWqwEmkVjdTeE="/>
+            <table:column id="c_org_easybi_domain_PizzaOrder_address" property="address" z="I/A8sSStNLOBvJ2vqtOqUfjesbg="/>
+            <table:column id="c_org_easybi_domain_PizzaOrder_total" property="total" z="Bn0L2m7hz+04aUouJH8Jmugly5E="/>
+            <table:column date="true" dateTimePattern="${pizzaOrder_deliverydate_date_format}" id="c_org_easybi_domain_PizzaOrder_deliveryDate" property="deliveryDate" z="6Q9/uBeeKAH6c/raUrWdpVj/Ch0="/>
+            <table:column id="c_org_easybi_domain_PizzaOrder_pizzas" property="pizzas" z="tbjVaYj3VEepKJrBEz/FlFgd2ZE="/>
+        </table:table>
+    </page:list>
+</div>
