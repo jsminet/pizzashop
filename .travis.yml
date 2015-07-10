@@ -3,7 +3,7 @@ jdk:
 - oraclejdk7
 # set a mysql database
 before_install:
-  - psql -c 'create database test;' -U root
+  - psql -c 'create database test;' -U postgres
 # whitelist
 branches:
   only:
