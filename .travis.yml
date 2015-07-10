@@ -1,0 +1,18 @@
+language: java
+jdk:
+- oraclejdk7
+# set a mysql database
+before_install:
+  - psql -c 'create database IF NOT EXISTS test;' -U root
+# whitelist
+branches:
+  only:
+    - master
+notifications:
+  email: false
+
+deploy:
+  provider: heroku
+  api_key: 5e33963b-7c2b-4d9e-abd4-885b4e13009f
+  on:
+    branch: master
