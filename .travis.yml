@@ -1,0 +1,20 @@
+language: java
+jdk:
+- oraclejdk7
+# set a mysql database
+addons:
+  postgresql: "9.1"
+before_install:
+ - psql -c 'create database travis_ci_test;' -U postgres
+# whitelist
+branches:
+  only:
+    - master
+notifications:
+  email: false
+
+deploy:
+  provider: heroku
+  api_key: 5e33963b-7c2b-4d9e-abd4-885b4e13009f
+  on:
+    branch: master
